@@ -8,3 +8,11 @@ It is made of 3 scripts:
 * `Dispensed` is the script to put in all wearable objects (drinks). It does not provide animation or anything else than handling rez and attach to avatar.
 
 
+## Simple setup
+
+1. Rez objects (drinks) to enable for wearing and drop in them the `Dispensed` script. Be sure to have the animation and associated script as `Dispensed` does not handle animation at all, only communication with the drinks server and attachment to the avatar.
+2. Take back all enabled objects.
+3. Put all objects in one object, alongside the `Drinks Server` script. This object will become the unique drinks provider. If at anytime you want to add or remove drinks (with the `Dispensed` script), just modify this object's content. The server script will detect the change and adapt the list of available drinks.
+4. Choose one or several objects to become dispensers, aka touchable to get a menu of drinks. The drinks server itself can be a dispenser, but it's not mandatory (the server can be an hidden object)
+5. Enjoy drinks :)
+6. 
