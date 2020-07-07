@@ -19,10 +19,10 @@
 integer MAINCHAN  = -4958688484;
 
 // Total time in seconds after which an object is considered lost
-integer TIMEOUT   = 60.0;
+float TIMEOUT   = 60.0;
 
 // Timer to regularly check for dispensed drinks
-integer CHKTIME   = 10.0;
+float CHKTIME   = 10.0;
 
 // End of setup (do not modify code below unless you know what you do)
 /////////////////////////////////////////////////////////////////////////////////////////
