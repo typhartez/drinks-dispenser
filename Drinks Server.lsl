@@ -1,4 +1,4 @@
-// Drinks Server by Typhaine Artez - 2020 for OpenSim
+// Drinks Server by Typhaine Artez - 2020-2025 for OpenSim
 //
 // Provided under Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 International license.
 // Please be sure you read and adhere to the terms of this license: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -16,7 +16,7 @@
 
 // Main channel the server will listen at. You should change this only if another script
 // is using the same channel
-integer MAINCHAN  = -4958688484;
+integer MAINCHAN  = -48688484;
 
 // Total time in seconds after which an object is considered lost
 float TIMEOUT   = 60.0;
@@ -34,8 +34,7 @@ list pending;   // object_param, object_name, avatar_id
 loadDrinks() {
     drinks = [];
     integer c = llGetInventoryNumber(INVENTORY_OBJECT);
-    while (~(--c))
-        drinks += llGetInventoryName(INVENTORY_OBJECT, c);
+    while (~(--c)) drinks += llGetInventoryName(INVENTORY_OBJECT, c);
     llOwnerSay((string)llGetListLength(drinks) + " drinks loaded");
 }
 
@@ -160,6 +159,8 @@ default {
 ////////////////////////////////////////////////////////////////////////////////
 // Changelog
 
+// 1.3 2025-09-19
+//  * fixed main channel
 // 1.2 2020-07-07
 //  * public release
 // 1.1 2020-06-12
